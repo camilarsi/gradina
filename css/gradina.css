@@ -1028,15 +1028,39 @@ button:focus-visible {
   .page-nos .digital .acciones {
     position: fixed;
     right: var(--gutter);
-    bottom: 1.5rem;
+    bottom: 1.2rem;
     z-index: 30;
     display: grid;
     grid-template-columns: 1fr 1fr;   /* el botón ocupa las dos columnas; Email e Instagram van lado a lado debajo */
-    gap: 1rem 1.5rem;
-    padding: 1.25rem 1.5rem;
+    gap: .8rem 1.2rem;
+    padding: 1rem 1.2rem;
     background: var(--grafito);
     border: 1px solid var(--aqua);
-    box-shadow: 6px 6px 0 rgba(0, 0, 0, .55);
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, .55);
+  }
+
+  /* La caja flotante mide un 20 % menos que los botones del inicio, para tapar menos contenido */
+  .page-nos .digital .acciones .btn-g {
+    min-height: 3.4rem;
+    padding: .72rem 1.6rem;
+    font-size: 1rem;
+  }
+
+  .page-nos .digital .acciones .btn-g i {
+    font-size: 1.2rem;
+  }
+
+  .page-nos .digital .acciones .btn-g--lg {
+    min-height: 4rem;
+    font-size: 1.2rem;
+  }
+
+  .page-nos .digital .acciones .btn-g--accent {
+    box-shadow: 3px 3px 0 #000;
+  }
+
+  .page-nos .digital .acciones .link-g {
+    font-size: 1rem;
   }
 
   .page-nos .digital .acciones .btn-g {
@@ -1247,7 +1271,7 @@ button:focus-visible {
   }
 
   .ventana--trabajos {
-    scroll-margin-bottom: 13rem;   /* al ir al final, el borde inferior de la ventana queda por encima de la caja flotante de contacto */
+    scroll-margin-bottom: 10.5rem;   /* al ir al final, el borde inferior de la ventana queda por encima de la caja flotante de contacto */
   }
 
   .ventana--trabajos .pantalla-pie {
