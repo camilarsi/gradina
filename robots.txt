@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gradina.com.ar/sitemap.xml
