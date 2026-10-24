@@ -169,7 +169,7 @@ button:focus-visible {
 }
 
 /* El bloque de granito: su borde superior es una línea horizontal con un corte en ángulo desde la izquierda, y la
-   Piedra Movediza (Tandil) apoyada sobre ellos en un único punto. Cerro y piedra se dibujan en píxeles de CSS (sin estirarse) a la escala del texto del logotipo (--u),
+   Piedra Movediza apoyada sobre ellos en un único punto. Cerro y piedra se dibujan en píxeles de CSS (sin estirarse) a la escala del texto del logotipo (--u),
    así la piedra mide siempre 3 veces la G. Si el bloque es más ancho que la silueta, el cerro sigue plano. */
 .stone {
   --u: 1;
