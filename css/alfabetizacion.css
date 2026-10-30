@@ -1,0 +1,238 @@
+/* ==========================================================================
+   Página del ebook «Alfabetización digital».
+   Usa las variables y los botones de gradina.css; acá sólo va el armado de la página.
+   Tamaños de letra generosos: el material es para lectores que recién se acercan a la tecnología.
+   ========================================================================== */
+
+.page-alfa {
+  font-size: 1.125rem;
+}
+
+.alfa-cab {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem var(--gutter);
+}
+
+.alfa-marca {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--optico);
+  text-decoration: none;
+}
+
+.alfa-marca .wordmark-g {
+  color: var(--aqua);
+}
+
+.alfa {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 1rem var(--gutter) 3rem;
+}
+
+/* ---------- Portada + bajada ---------- */
+
+.alfa-hero {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 3.5rem;
+}
+
+.alfa-tapa {
+  order: 2;
+  margin: 0;
+  max-width: 12rem;
+}
+
+.alfa-texto {
+  order: 1;
+}
+
+.alfa-tapa img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 6px 6px 0 var(--aqua);
+}
+
+.alfa-etiqueta {
+  margin: 0 0 .75rem;
+  font-family: var(--font-mono);
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--aqua);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.alfa h1 {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 1.6rem + 4.6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.alfa-bajada {
+  max-width: 34ch;
+  margin: 0 0 2rem;
+  font-size: 1.375rem;
+  line-height: 1.45;
+}
+
+.alfa-descargas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 26rem;
+}
+
+.alfa-descargas .btn-g {
+  justify-content: flex-start;
+}
+
+.alfa-descargas .peso {
+  margin-left: auto;
+  font-weight: 400;
+  opacity: .85;
+}
+
+.alfa-nota {
+  max-width: 52ch;
+  margin: 1.25rem 0 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, .82);
+}
+
+/* ---------- Secciones ---------- */
+
+.alfa-seccion {
+  max-width: 46rem;
+  margin: 0 0 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, .25);
+}
+
+.alfa-seccion h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.alfa-seccion p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.alfa-indice,
+.alfa-lista {
+  margin: 0 0 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.alfa-indice li,
+.alfa-lista li {
+  margin-bottom: .5rem;
+  padding-left: .35rem;
+  line-height: 1.5;
+}
+
+.alfa-indice li::marker {
+  color: var(--aqua);
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.alfa-lista li::marker {
+  color: var(--aqua);
+}
+
+/* ---------- Aportes (aparece sólo si hay alias en config.js) ---------- */
+
+.alfa-alias {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem 1rem;
+  margin: 1.25rem 0 .5rem;
+}
+
+.alfa-alias-etq {
+  font-family: var(--font-mono);
+  font-size: .9375rem;
+  color: rgba(255, 255, 255, .8);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.alfa-alias code {
+  padding: .6rem 1rem;
+  border: 1px solid rgba(255, 255, 255, .5);
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--optico);
+  background: rgba(255, 255, 255, .06);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Acompañamiento y pie ---------- */
+
+.alfa .acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.alfa .link-g {
+  color: var(--optico);
+}
+
+.alfa-pie {
+  padding: 1.25rem var(--gutter) 2rem;
+  color: rgba(255, 255, 255, .75);
+  font-size: .9375rem;
+}
+
+/* ---------- Escritorio ---------- */
+
+@media (min-width: 760px) {
+  .alfa-hero {
+    grid-template-columns: 17rem 1fr;
+    gap: 3.5rem;
+  }
+
+  .alfa-tapa {
+    order: 0;
+    max-width: none;
+  }
+
+  .alfa-texto {
+    order: 0;
+  }
+
+  .alfa-descargas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .alfa-descargas .btn-g {
+    font-size: .9375rem;
+    padding-inline: 1rem;
+  }
+}
